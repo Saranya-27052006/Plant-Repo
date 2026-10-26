@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plant Assessment</title>
+    <link rel="stylesheet" href="./css/formcode.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="26"
+            height="26"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="leaf"
+          >
+            <path
+              d="M11 20a10 10 0 0010-10 25.9 25.9 0 00-1.04-7.281 1 1 0 00-1.755-.325C15.833 5.5 13 5.5 9.8 6.1A7 7 0 0011 20"
+            />
+            <path
+              d="M2 21a5 5 0 012.911-4.544C7.613 15.212 8.351 15.24 11 13"
+            />
+          </svg>
+          <span class="Plant_doctor">Plant Doctor</span>
+        </div>
+        <div class="nav_text">
+          <a href="index.html#about">About</a>
+          <a href="index.html#how-it-works">How it works</a>
+          <a href="index.html#trust">Our approach</a>
+          <a href="history.html" class="history_btn">Diagnosis History</a>
+          <button id="logout-btn">Logout</button>
+        </div>
+      </nav>
+    </header>
+    <div class="main_container">
+      <!-- Left side section -->
+      <aside>
+        <div class="logo_container">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="logo"
+            aria-hidden="true"
+          >
+            <path
+              d="M2 22c1.25-.987 2.27-1.975 3.9-2.2a5.56 5.56 0 0 1 3.8 1.5 4 4 0 0 0 6.187-2.353 3.5 3.5 0 0 0 3.69-5.116A3.5 3.5 0 0 0 20.95 8 3.5 3.5 0 1 0 16 3.05a3.5 3.5 0 0 0-5.831 1.373 3.5 3.5 0 0 0-5.116 3.69 4 4 0 0 0-2.348 6.155C3.499 15.42 4.409 16.712 4.2 18.1 3.926 19.743 3.014 20.732 2 22"
+            />
+            <path d="M2 22 17 7" />
+          </svg>
+
+          <strong>Plant Assessment</strong>
+        </div>
+
+        <br /><br />
+
+        <div class="plant">
+          <div class="dot"></div>
+          <p>Plant Health Check</p>
+        </div>
+
+        <br /><br />
+
+        <h2 class="help">
+          Help your plant <br />
+          feel like itself <br />
+          again
+        </h2>
+
+        <br /><br />
+
+        <p class="tell">
+          Tell us what you notice. A few thoughtful details can reveal what your
+          plant needs to thrive.
+        </p>
+
+        <img
+          src="./assets/aside-image.png"
+          alt="Plant illustration"
+          class="aside_image"
+        />
+      </aside>
+
+      <!-- Right side section -->
+      <main>
+        <!-- Assessment form -->
+        <div id="form-container">
+          <div class="top_con">
+            <h2 class="what">What's going on?</h2>
+            <br />
+            <p class="complete">
+              Complete the details below for a clear assessment.
+            </p>
+          </div>
+
+          <br />
+
+          <form class="form">
+            <!-- Plant name -->
+            <div>
+              <label for="name">Name of the plant:</label>
+
+              <select id="name" class="appear" required>
+                <option value="">Select a plant</option>
+                <option value="monstera deliciosa">Monstera Deliciosa</option>
+                <option value="calathea ornata">Calathea Ornata</option>
+                <option value="impatiens">Impatiens</option>
+                <option value="squash plant">Squash Plant</option>
+                <option value="fiddle leaf fig">Fiddle Leaf Fig</option>
+                <option value="tomato plant">Tomato Plant</option>
+                <option value="pothos">Pothos</option>
+                <option value="spider plant">Spider Plant</option>
+                <option value="snake plant">Snake Plant</option>
+                <option value="peace lily">Peace Lily</option>
+                <option value="cucumber plant">Cucumber Plant</option>
+                <option value="basil">Basil</option>
+                <option value="pepper plant">Pepper Plant</option>
+                <option value="lemon tree">Lemon Tree</option>
+                <option value="rose bush">Rose Bush</option>
+                <option value="strawberry plant">Strawberry Plant</option>
+                <option value="other plant">Other Plant</option>
+              </select>
+            </div>
+
+            <br />
+
+            <!-- Leaf appearance -->
+            <div>
+              <label for="appear">Leaf Appearance:</label>
+
+              <select class="appear" id="appear" required>
+                <option value="">Select appearance</option>
+                <option value="yellowing">Yellowing</option>
+                <option value="brown_spots">Brown or black spots</option>
+                <option value="wilting">Wilting</option>
+                <option value="veins">Yellowing between veins</option>
+                <option value="white_powder">Powdery white/gray coating</option>
+                <option value="leaf_drop">Leaves falling off easily</option>
+                <option vlaue="other">Others</option>
+              </select>
+            </div>
+
+            <br />
+
+            <!-- Symptoms timing -->
+            <div>
+              <label for="st">Symptoms Timing:</label>
+
+              <select class="appear" id="st" name="timing" required>
+                <option value="">When do you notice it most?</option>
+                <option value="morning">In the morning</option>
+                <option value="afternoon">In the afternoon</option>
+                <option value="evening">In the evening</option>
+                <option value="night">At night / Overnight</option>
+              </select>
+            </div>
+
+            <br />
+
+            <!-- Symptom description -->
+            <div class="sym">
+              <label for="ta">Symptoms (optional):</label>
+              <textarea
+                name="symptoms"
+                id="ta"
+                placeholder="Describe what you notice about your plant..."
+              ></textarea>
+            </div>
+
+            <br />
+
+            <!-- Symptom duration -->
+            <div>
+              <label for="ds">Duration of symptoms:</label>
+
+              <input
+                type="text"
+                class="appear"
+                id="ds"
+                placeholder="e.g. 3 days or 2 weeks"
+                required
+              />
+            </div>
+
+            <br />
+
+            <!-- Watering level -->
+            <div>
+              <label for="wl">Watering Level:</label>
+
+              <select class="appear" name="waterlevel" id="wl" required>
+                <option value="">Select watering level</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+              </select>
+            </div>
+
+            <br />
+
+            <button type="submit" class="get_btn">GET RESULTS</button>
+          </form>
+        </div>
+
+        <!-- Assessment results -->
+        <div class="result">
+          <div class="assessment">
+            <span class="ac">ASSESSMENT COMPLETE</span>
+
+            <br /><br />
+
+            <h2 class="health">Your Plant Health Assessment</h2>
+            <p></p>
+
+            <br />
+          </div>
+
+          <br /><br />
+
+          <div class="Probable_gen">
+            <h3>🌱 Treatment & Care Protocol</h3>
+            <ul id="cure-steps"></ul>
+            <a href="formcode.html" class="another_plant"
+              >Check another plant</a
+            >
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer class="footer">
+      <p>Plant Doctor · A helpful starting point for plant care</p>
+    </footer>
+
+    <script type="module" src="formcode.js"></script>
+  </body>
+</html>

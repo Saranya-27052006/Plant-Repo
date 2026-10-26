@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plant Doctor | Plant Care Assessment</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="26"
+            height="26"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="leaf"
+          >
+            <path
+              d="M11 20a10 10 0 0010-10 25.9 25.9 0 00-1.04-7.281 1 1 0 00-1.755-.325C15.833 5.5 13 5.5 9.8 6.1A7 7 0 0011 20"
+            />
+            <path
+              d="M2 21a5 5 0 012.911-4.544C7.613 15.212 8.351 15.24 11 13"
+            />
+          </svg>
+          <span class="Plant_doctor">Plant Doctor</span>
+        </div>
+        <div class="nav_text">
+          <a href="#about">About</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="#trust">Our approach</a>
+          <a href="signup.html" class="signup_btn">Sign Up</a>
+          <a href="login.html" class="login_btn">Login</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page_top1">
+        <div class="mainsection">
+          <div class="hero_content">
+            <div class="eyebrow">
+              <span class="small_dot"></span>
+              <span>A simpler way to care for plants</span>
+            </div>
+            <div class="left_section">
+              <h1 class="dying">Is your plant unhealthy?</h1>
+              <h1 class="save">Let's find out why.</h1>
+              <p class="para">
+                Select your plant, describe its leaf appearance, and provide
+                your watering details. Plant Doctor checks your selections
+                against its diagnosis database and suggests possible causes and
+                care steps.
+              </p>
+            </div>
+            <div class="four_box">
+              <div class="home_card">
+                <i class="fa-regular fa-clock"></i>
+                <p>Quick plant assessment</p>
+              </div>
+              <div class="home_card">
+                <i class="fa-solid fa-seedling"></i>
+                <p>Plant-specific results</p>
+              </div>
+              <div class="home_card">
+                <i class="fa-solid fa-check"></i>
+                <p>Care-based suggestions</p>
+              </div>
+              <div class="home_card">
+                <i class="fa-regular fa-heart"></i>
+                <p>Simple care guidance</p>
+              </div>
+            </div>
+          </div>
+          <aside class="image_container">
+            <img
+              src="./assets/plant-img.jpg"
+              alt="Healthy green plant leaves"
+              class="plantimg"
+            />
+            <div class="i live_diagnosis_card">
+              <div class="cards">
+                <span class="dot"></span>
+                <h3>Plant Assessment</h3>
+              </div>
+              <span class="img_span"
+                >Possible causes based on your selections</span
+              >
+            </div>
+            <div class="i Recovery_card">
+              <div class="cards">
+                <span class="dot"></span>
+                <h3>Care Suggestions</h3>
+              </div>
+              <span class="img_span"
+                >Practical steps to help care for your plant</span
+              >
+            </div>
+          </aside>
+        </div>
+        <div class="all_ac">
+          <div>
+            <div class="num">16</div>
+            <div>Supported plant types</div>
+          </div>
+          <div>
+            <div class="num">6</div>
+            <div>Leaf appearance options</div>
+          </div>
+          <div>
+            <div class="num">3</div>
+            <div>Watering levels</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page_about" id="about">
+        <div class="page_about1">
+          <span class="warning_icon">!</span
+          ><span class="evidence">Start with the evidence</span>
+        </div>
+        <div class="page_about2">
+          <h2>Understand your plant before treating it</h2>
+          <p class="p2_para">
+            Different plant problems can produce similar symptoms. Choose your
+            plant, describe what you see, and include your watering level to
+            receive a more relevant assessment.
+          </p>
+        </div>
+      </section>
+
+      <section class="mainbox">
+        <article class="box">
+          <div class="box_btn">
+            <i class="fa-regular fa-circle-question"></i>
+          </div>
+          <div class="span_p">
+            <h3 class="box_span">
+              "Why are my plant's leaves changing colour?"
+            </h3>
+            <p class="para_box">
+              Select the leaf appearance to explore possible causes of
+              yellowing, brown spots, and other visible changes.
+            </p>
+          </div>
+        </article>
+        <article class="box">
+          <div class="box_btn"><i class="fa-solid fa-droplet"></i></div>
+          <div class="span_p">
+            <h3 class="box_span">"Am I watering my plant correctly?"</h3>
+            <p class="para_box">
+              Include your watering level to help narrow down possible
+              watering-related problems.
+            </p>
+          </div>
+        </article>
+        <article class="box">
+          <div class="box_btn"><i class="fa-regular fa-clock"></i></div>
+          <div class="span_p">
+            <h3 class="box_span">"What should I do next?"</h3>
+            <p class="para_box">
+              Review the possible cause, recommended care steps, and additional
+              checks before deciding what to do.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section class="diagnosis_section">
+        <div class="sec3_div1">
+          <h2>Meet your plant's care assistant.</h2>
+          <p class="p2_para">
+            Plant Doctor uses your selected plant, visible symptoms, and
+            watering details to find a matching record in its database and
+            suggest possible causes and care steps.
+          </p>
+        </div>
+        <div class="both_lr">
+          <div class="leftbox">
+            <div class="pd">
+              <i class="fa-solid fa-leaf"></i>
+              <h3>What you can check</h3>
+            </div>
+            <div class="twodiv">
+              <div class="c1">
+                <div class="inside_box">
+                  <span class="check">✓</span>
+                  <p>Yellowing leaves</p>
+                </div>
+                <div class="inside_box">
+                  <span class="check">✓</span>
+                  <p>Brown or black spots</p>
+                </div>
+                <div class="inside_box">
+                  <span class="check">✓</span>
+                  <p>Wilting and drooping</p>
+                </div>
+              </div>
+              <div class="c2">
+                <div class="inside_box">
+                  <span class="check">✓</span>
+                  <p>Yellowing between veins</p>
+                </div>
+                <div class="inside_box">
+                  <span class="check">✓</span>
+                  <p>White powder on leaves</p>
+                </div>
+                <div class="inside_box">
+                  <span class="check">✓</span>
+                  <p>Leaf drop</p>
+                </div>
+              </div>
+            </div>
+            <p class="helper_note">
+              These are symptom choices in the current assessment form. They
+              help explore possible causes but do not confirm a disease by
+              themselves.
+            </p>
+          </div>
+          <div class="rightbox">
+            <div class="camera">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <h3>Example care checks</h3>
+            </div>
+            <div class="rs_div2">
+              <span>Example: possible watering-related stress</span>
+              <p>Check the soil before watering again.</p>
+              <p>Make sure excess water can drain away.</p>
+            </div>
+            <div class="soggy_visible">
+              <div class="soggy">
+                <span class="water_icon">💧</span
+                ><span>Check whether the soil stays wet for a long time.</span>
+              </div>
+              <div class="visible">
+                <span class="check">✓</span
+                ><span
+                  >Look for drainage problems and other visible signs.</span
+                >
+              </div>
+            </div>
+            <p class="soggy_para">
+              These are general checks, not a diagnosis. Follow suggestions that
+              fit your plant's actual symptoms and conditions.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works">
+        <div class="how_works">
+          <h2 class="how_span">How it works</h2>
+          <p class="how_p">Four simple steps to get a plant assessment.</p>
+        </div>
+        <div class="step">
+          <article class="how_box">
+            <h3 class="num">1</h3>
+            <h3 class="box_span">Choose Your Plant</h3>
+            <p class="step_p">
+              Select your plant type and the leaf appearance you observe.
+            </p>
+          </article>
+          <div class="step_arrow">→</div>
+          <article class="how_box">
+            <h3 class="num">2</h3>
+            <h3 class="box_span">Describe the Problem</h3>
+            <p class="step_p">
+              Choose when symptoms appear, enter their duration, and optionally
+              add details.
+            </p>
+          </article>
+          <div class="step_arrow">→</div>
+          <article class="how_box">
+            <h3 class="num">3</h3>
+            <h3 class="box_span">Check the Assessment</h3>
+            <p class="step_p">
+              The website searches Firebase for a matching plant, appearance,
+              and watering level.
+            </p>
+          </article>
+          <div class="step_arrow">→</div>
+          <article class="how_box">
+            <h3 class="num">4</h3>
+            <h3 class="box_span">Review Care Steps</h3>
+            <p class="step_p">
+              Read the possible cause, suggested steps, and additional checks.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="trust">
+        <div class="div1">
+          <div class="div2">
+            <div class="section_heading">
+              <span class="shield_icon">✓</span>
+              <h2 class="built">A careful, transparent approach</h2>
+            </div>
+            <ul class="trust_list">
+              <li>Uses your selected plant and symptom details.</li>
+              <li>Provides possible causes, not guaranteed diagnoses.</li>
+              <li>Shows care suggestions from the matching database record.</li>
+              <li>Lets you know when a matching record is unavailable.</li>
+            </ul>
+            <a class="diagnosis_btn" href="formcode.html"
+              >Open the diagnosis form <span>→</span></a
+            >
+          </div>
+          <div class="div3">
+            <div class="section_heading">
+              <span class="target_icon">◎</span>
+              <h2 class="built">What affects your result?</h2>
+            </div>
+            <div class="result_factors">
+              <div>
+                <h3>Plant</h3>
+                <p>The plant type you select</p>
+              </div>
+              <div>
+                <h3>Symptoms</h3>
+                <p>The leaf appearance you observe</p>
+              </div>
+              <div>
+                <h3>Watering</h3>
+                <p>Your selected watering level</p>
+              </div>
+            </div>
+            <p class="trust_note">
+              Results depend on the records available in the database and the
+              accuracy of the details you provide. Check the plant's actual
+              conditions before treating it.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="final_section">
+        <div class="start_check">
+          <h2 class="start">Ready to check your plant?</h2>
+          <p class="start_span">
+            Choose your plant, describe its symptoms, and review the available
+            diagnosis and care suggestions.
+          </p>
+        </div>
+        <div class="work">
+          <span class="check">✓</span
+          ><span>Simple guided assessment in your browser</span>
+        </div>
+        <div class="main-3divs">
+          <a class="diagnosis" id="diag_btn" href="signup.html"
+            >Start with Diagnosis <span>→</span></a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Plant Doctor · A helpful starting point for plant care</p>
+    </footer>
+  </body>
+</html>

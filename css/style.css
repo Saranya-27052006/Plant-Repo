@@ -1,0 +1,729 @@
+/* Plant Doctor - simple beginner-friendly CSS */
+
+/* 1. Reset and common styles */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+:root {
+  --green: #247747;
+  --dark-green: #153e2a;
+  --light-green: #eef7ef;
+  --gray: #64746a;
+  --border: #dce8dd;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* 2. Navigation bar */
+header {
+  position: sticky;
+  top: 0;
+  background: #f8fcf8;
+  box-shadow: 0 2px 8px #00000010;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 15px 7%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo .leaf {
+  background: var(--green);
+  color: white;
+  border-radius: 8px;
+  padding: 6px;
+}
+
+.Plant_doctor {
+  color: var(--dark-green);
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav_text {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav_text a {
+  color: #526257;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.nav_text a:hover {
+  color: var(--green);
+}
+
+/* 3. Hero section */
+.page_top1 {
+  padding: 45px 77px;
+  background-color: var(--light-green);
+}
+
+.mainsection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 35px;
+}
+
+.eyebrow {
+  display: inline-block;
+  padding: 7px 12px;
+  margin-bottom: 15px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  color: var(--green);
+  background-color: white;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.small_dot,
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background: #28a35a;
+}
+
+.left_section h1 {
+  color: var(--dark-green);
+  font-size: 44px;
+  line-height: 1.2;
+}
+
+.left_section .save {
+  color: var(--green);
+}
+
+.para {
+  margin-top: 18px;
+  color: var(--gray);
+}
+
+.four_box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.home_card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: white;
+  font-size: 13px;
+}
+
+.home_card i {
+  color: var(--green);
+}
+
+/* 4. Plant image and information cards */
+.image_container {
+  position: relative;
+}
+
+.plantimg {
+  width: 100%;
+  height: 400px;
+  border-radius: 18px;
+}
+
+.i {
+  position: absolute;
+  width: 215px;
+  padding: 12px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.live_diagnosis_card {
+  top: 20px;
+  left: -15px;
+}
+
+.Recovery_card {
+  right: -15px;
+  bottom: 20px;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cards h3 {
+  font-size: 13px;
+}
+
+.img_span {
+  margin-top: 5px;
+  color: var(--gray);
+  font-size: 12px;
+}
+
+/* 5. Statistics */
+.all_ac {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.all_ac > div {
+  color: var(--gray);
+  font-size: 13px;
+}
+
+.num {
+  color: var(--green);
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* 6. About section */
+.page_about {
+  padding: 35px 20px 10px;
+}
+
+.page_about1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: #956126;
+}
+
+.warning_icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #bd873f;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.evidence {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.page_about2 {
+  max-width: 800px;
+  margin: 15px auto 25px;
+  text-align: center;
+}
+
+.page_about2 h2,
+.sec3_div1 h2 {
+  margin-bottom: 10px;
+  color: var(--dark-green);
+  font-size: 32px;
+}
+
+.p2_para {
+  color: var(--gray);
+}
+
+/* 7. Common problem cards */
+.mainbox {
+  margin: 30px auto 70px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.box {
+  display: flex;
+  gap: 12px;
+  padding: 20px;
+  background-color: var(--light-green);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.box_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 40px;
+  background-color: #dcefe0;
+  color: var(--green);
+  border-radius: 8px;
+}
+
+.box_span {
+  color: var(--dark-green);
+}
+
+.para_box {
+  margin-top: 8px;
+  color: var(--gray);
+  font-size: 14px;
+}
+
+/* 8. Diagnosis section */
+.sec3_div1 {
+  padding: 0 20px;
+  text-align: center;
+}
+
+.both_lr {
+  margin: 30px auto 65px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.leftbox,
+.rightbox {
+  padding: 22px;
+  background: var(--light-green);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+.pd,
+.camera {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--dark-green);
+}
+
+.pd i,
+.camera i {
+  color: var(--green);
+}
+
+.twodiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.inside_box {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+  padding: 10px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.check {
+  color: var(--green);
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.helper_note,
+.soggy_para {
+  margin-top: 10px;
+  color: var(--gray);
+  font-size: 14px;
+}
+
+.rs_div2 {
+  margin: 15px 0;
+  padding: 15px;
+  background-color: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.rs_div2 span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--gray);
+  font-size: 12px;
+}
+
+.rs_div2 p {
+  color: var(--dark-green);
+  font-size: 14px;
+}
+
+.rs_div2 p + p {
+  color: var(--gray);
+}
+
+.soggy_visible {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.soggy,
+.visible {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--gray);
+  font-size: 12px;
+}
+
+/* 9. How it works */
+#how-it-works {
+  padding: 15px 0 60px;
+}
+
+.how_works {
+  text-align: center;
+}
+
+.how_span {
+  color: var(--dark-green);
+  font-size: 32px;
+}
+
+.how_p {
+  margin-top: 8px;
+  color: var(--gray);
+}
+
+.step {
+  margin: 25px auto 0;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+}
+
+.how_box {
+  padding: 20px 12px;
+  text-align: center;
+  background-color: var(--light-green);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.how_box .num {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 12px;
+  background: #dcefe0;
+  border-radius: 10px;
+}
+
+.step_p {
+  margin-top: 8px;
+  color: var(--gray);
+  font-size: 12px;
+}
+
+.step_arrow {
+  color: var(--green);
+  font-size: 20px;
+}
+
+/* 10. Trust section */
+#trust {
+  padding-bottom: 60px;
+}
+
+.div1 {
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.div2,
+.div3 {
+  padding: 22px;
+  background-color: var(--light-green);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+.section_heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.shield_icon,
+.target_icon {
+  color: var(--green);
+  font-size: 24px;
+}
+
+.built {
+  color: var(--dark-green);
+  font-size: 18px;
+}
+
+.trust_list {
+  margin: 20px 0 20px 20px;
+  color: var(--gray);
+  font-size: 14px;
+}
+
+.trust_list li {
+  margin-bottom: 10px;
+}
+
+.diagnosis_btn {
+  padding: 11px 14px;
+  color: var(--green);
+  background-color: white;
+  border: 1px solid #bcd8c2;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.diagnosis_btn:hover {
+  color: white;
+  background: var(--green);
+}
+
+.result_factors {
+  margin: 18px 0;
+}
+
+.result_factors > div {
+  margin-bottom: 10px;
+  padding: 12px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.result_factors h3 {
+  color: var(--green);
+  font-size: 15px;
+}
+
+.result_factors p,
+.trust_note {
+  color: var(--gray);
+  font-size: 13px;
+}
+
+/* 11. Final section and footer */
+.final_section {
+  padding: 35px 20px 10px;
+  background-color: var(--light-green);
+  text-align: center;
+}
+
+.start {
+  color: var(--dark-green);
+  font-size: 32px;
+}
+
+.start_span {
+  margin: 10px auto 0;
+  color: var(--gray);
+}
+
+.work {
+  margin-top: 18px;
+  color: var(--gray);
+  font-size: 13px;
+}
+
+.main-3divs {
+  margin: 20px 0 30px;
+}
+
+.diagnosis {
+  padding: 13px 22px;
+  color: white;
+  background-color: var(--green);
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.diagnosis:hover {
+  background: var(--dark-green);
+}
+
+.footer {
+  padding: 18px;
+  color: grey;
+  background-color: var(--dark-green);
+  text-align: center;
+  font-size: 18px;
+  bottom: 0;
+}
+
+.signup_btn,
+.login_btn {
+  padding: 8px 16px;
+  color: var(--green);
+  border: 1px solid var(--green);
+  border-radius: 8px;
+}
+.signup_btn:hover,
+.login_btn:hover {
+  background-color: var(--light-green);
+}
+/* 12. Tablet screen  */
+@media (max-width: 900px) {
+  .mainsection {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .left_section h1 {
+    font-size: 35px;
+  }
+
+  .mainbox {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .step {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .step_arrow {
+    display: none;
+  }
+} 
+
+/* 13. Mobile screen */
+@media (max-width: 650px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .nav_text {
+    justify-content: center;
+    gap: 12px 18px;
+  }
+
+  .page_top1 {
+    padding: 30px 18px;
+  }
+
+  .mainsection,
+  .mainbox,
+  .both_lr,
+  .div1 {
+    grid-template-columns: 1fr;
+  }
+
+  .left_section h1 {
+    font-size: 34px;
+  }
+
+  .four_box {
+    grid-template-columns: 1fr;
+  }
+
+  .image_container {
+    margin: 15px 0;
+  }
+
+  .plantimg {
+    height: 300px;
+  }
+
+  .i {
+    width: 185px;
+  }
+
+  .live_diagnosis_card {
+    left: -5px;
+  }
+
+  .Recovery_card {
+    right: -5px;
+  }
+
+  .all_ac {
+    gap: 10px;
+    padding: 15px 8px;
+  }
+
+  .all_ac > div {
+    flex: 1;
+    min-width: 80px;
+    font-size: 11px;
+  }
+
+  .num {
+    font-size: 24px;
+  }
+
+  .mainbox,
+  .both_lr,
+  .div1 {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .twodiv,
+  .soggy_visible {
+    grid-template-columns: 1fr;
+  }
+
+  .step {
+    grid-template-columns: 1fr;
+    padding: 0 18px;
+  }
+
+  .page_about2 h2,
+  .sec3_div1 h2,
+  .how_span,
+  .start {
+    font-size: 27px;
+  }
+}

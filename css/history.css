@@ -1,0 +1,237 @@
+/* =========================
+   GENERAL PAGE STYLING
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 30px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #f1f8e9, #e8f5e9);
+  color: #263b2b;
+  min-height: 100vh;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(30, 70, 40, 0.1);
+}
+
+/* =========================
+   HEADINGS
+========================= */
+
+h1 {
+  margin: 0 0 10px;
+  color: #1b5e20;
+  text-align: center;
+  font-size: 32px;
+}
+
+h2 {
+  margin: 0 0 25px;
+  color: #388e3c;
+  text-align: center;
+  font-size: 24px;
+}
+
+/* =========================
+   HISTORY MESSAGE
+========================= */
+
+#history-message {
+  margin: 20px 0 30px;
+  color: #355e3b;
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* =========================
+   HISTORY GRID
+========================= */
+
+.history-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 25px;
+  align-items: stretch;
+}
+
+/* =========================
+   INDIVIDUAL HISTORY CARD
+========================= */
+
+.history-card {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  background-color: #f9fff8;
+  border: 1px solid #c8e6c9;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.08);
+  cursor: pointer;
+}
+
+.history-card:hover {
+  transform: translateY(-5px);
+  border-color: #81c784;
+  box-shadow: 0 10px 22px rgba(46, 125, 50, 0.15);
+}
+
+/* =========================
+   PLANT NAME
+========================= */
+
+.plant-name {
+  margin: 0 0 18px;
+  color: #1b5e20;
+  font-size: 21px;
+  font-weight: bold;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+/* =========================
+   CARD DETAILS
+========================= */
+
+.history-card p {
+  margin: 0 0 15px;
+  color: #455a46;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.history-card p:last-of-type {
+  margin-bottom: 22px;
+}
+
+/* =========================
+   VIEW DETAILS BUTTON
+========================= */
+
+.view-button {
+  display: block;
+  width: 100%;
+  margin-top: auto;
+  padding: 12px 15px;
+  background-color: #198754;
+  color: #ffffff;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.history-card:hover .view-button {
+  background-color: #146c43;
+}
+
+.view-button:hover {
+  background-color: #0d6838;
+}
+
+/* =========================
+   BOTTOM NAVIGATION
+========================= */
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.navigation a {
+  display: inline-block;
+  min-width: 150px;
+  padding: 13px 22px;
+  background-color: #1b5e20;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 9px;
+
+}
+
+.navigation a:hover {
+  background-color: #388e3c;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   TABLET RESPONSIVENESS
+========================= */
+
+@media (max-width: 900px) {
+  .history-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .container {
+    padding: 25px;
+  }
+}
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 600px) {
+  body {
+    padding: 15px 10px;
+  }
+
+  .container {
+    padding: 20px 15px;
+    border-radius: 12px;
+  }
+
+  h1 {
+    font-size: 27px;
+  }
+
+  h2 {
+    font-size: 21px;
+  }
+
+  .history-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .history-card {
+    padding: 20px;
+  }
+
+  .plant-name {
+    font-size: 20px;
+  }
+
+  .navigation {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .navigation a {
+    width: 100%;
+    max-width: 300px;
+  }
+}

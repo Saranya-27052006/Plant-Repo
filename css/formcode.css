@@ -107,7 +107,6 @@ aside {
   color: white;
   background-color: #153e2a;
   text-align: center;
-  font-size: 14px;
 }
 .plant {
   display: flex;
@@ -118,7 +117,6 @@ aside {
   border-radius: 20px;
   padding: 6px 16px;
   width: max-content;
-  margin-top: 40px;
   font-weight: bold;
 }
 
@@ -150,7 +148,6 @@ aside {
 /* Right Main Panels */
 main {
   flex: 1;
-  background-color: #fafbfa;
   padding: 45px;
 }
 
@@ -166,7 +163,6 @@ main {
 .complete {
   color: #6b7c6e;
   margin-top: 4px;
-  font-size: 0.95rem;
 }
 
 /* Form Styling Architecture */
@@ -177,7 +173,7 @@ main {
   width: 100%;
 } */
 
-.form-group {
+/* .form-group {
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -187,7 +183,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
-}
+} */
 
 label {
   font-weight: bold;
@@ -200,10 +196,7 @@ textarea {
   padding: 12px 16px;
   border: 1px solid #d1dbd3;
   border-radius: 10px;
-  color: #2d3b32;
-  font-size: 0.95rem;
-  outline: none;
-  transition: all 0.2s ease;
+  font-size: 17px;
 }
 
 /* .appear:focus,
@@ -250,9 +243,7 @@ textarea {
   background-color: #ffd166;
   color: #0d2818;
   padding: 4px 12px;
-  font-size: 0.75rem;
   font-weight: 700;
-  margin-bottom: 12px;
 }
 
 .health {

@@ -12,7 +12,7 @@ const detailsContainer = document.getElementById("details-container");
 
 const recordId = new URLSearchParams(window.location.search).get("id");
 
-onAuthStateChanged(auth, async (user) => {
+onAuthStateChanged(auth, async(user) => {
   detailsContainer.replaceChildren();
   detailsContainer.hidden = true;
 

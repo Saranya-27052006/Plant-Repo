@@ -24,35 +24,24 @@ if (signupForm) {
     button.textContent = "Creating account...";
 
     try {
+      //creates new firebase authentication account
       const userCredential = await createUserWithEmailAndPassword(
         auth,
         email,
         password,
       );
+      console.log("usercredential", userCredential);
+      console.log("usercredential.user", userCredential.user);
+
       await updateProfile(userCredential.user, {
         displayName: name,
       });
 
       message.textContent = "Account created successfully! Redirecting...";
-
       window.location.replace("login.html");
     } catch (error) {
       console.log(error);
-      const messages = {
-        "auth/email-already-in-use":
-          "This eamil already has an account.Please log in.",
-        "auth/invalid-email": "Please enter a valid email address",
-        "auth/weak-password": "Please choose a stronger password",
-        "auth/network-required-request-failed":
-          "Network error.Check your internet connection",
-        "auth/operation-not-allowed":
-          "Email/Password sign-in is not enabled in Firebase",
-      };
-
-      message.textContent =
-        messages[error.code] ||
-        "Could not create your account.Please try again.";
-
+      message.textContent = "Could not create your account.Please try again.";
       button.disabled = false;
       button.textContent = "Sign Up";
     }
@@ -82,18 +71,7 @@ if (loginForm) {
       window.location.replace("formcode.html");
     } catch (error) {
       console.log(error);
-
-      const messages = {
-        "auth/invalid-credential": "Incorrect email or password.",
-        "auth/user-not-found": "No account found.Please signup.",
-        "auth/wrong-password": "Incorrect password",
-        "auth/invalid-email": "please enter a valid email address",
-        "auth/too-many-requests": "Too many attempts.Please try again later.",
-        "auth/network-request-failed":
-          "Network error.Check your internet connection",
-      };
-      message.textContent =
-        messages[error.code] || "Login failed.Please try again.";
+      message.textContent = "Login failed.Please try again.";
       button.disabled = false;
       button.textContent = "Log In";
     }

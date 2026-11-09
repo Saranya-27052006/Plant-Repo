@@ -15,7 +15,12 @@ import {
   serverTimestamp,
   limit,
 } from "https://www.gstatic.com/firebasejs/13.0.0/firebase-firestore.js";
-import { getAuth } from "https://www.gstatic.com/firebasejs/13.0.0/firebase-auth.js";
+
+import {
+  getAuth,
+  setPersistence,
+  browserLocalPersistence,
+} from "https://www.gstatic.com/firebasejs/13.0.0/firebase-auth.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBgS5PP4jIWs07zLS_uw8pNW3KIqG2C7J8",
@@ -28,8 +33,15 @@ const firebaseConfig = {
 };
 
 const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
+
 export const db = getFirestore(app);
+console.log("db", db);
+
 export const auth = getAuth(app);
+console.log("auth", auth);
+// Keep the user logged in across page navigation and browser restarts.
+export const authReady = setPersistence(auth, browserLocalPersistence);
+console.log("authReady", authReady);
 
 function normalize(value) {
   return String(value ?? "")
@@ -38,6 +50,7 @@ function normalize(value) {
     .replace(/[\s-]+/g, "_");
 }
 
+// Find plant diagnosis
 export async function findDiagnosis(plantName, appearance, wateringLevel) {
   const plantKey = normalize(plantName);
   const appearanceKey = normalize(appearance);
@@ -45,7 +58,6 @@ export async function findDiagnosis(plantName, appearance, wateringLevel) {
 
   const diagnosesRef = collection(db, "plant_diagnosis");
 
-  // Query the exact stored field values first.
   const diagnosisQuery = query(
     diagnosesRef,
     where("plantName", "==", plantKey.replace(/_/g, " ")),
@@ -54,19 +66,23 @@ export async function findDiagnosis(plantName, appearance, wateringLevel) {
   );
 
   const snapshot = await getDocs(diagnosisQuery);
+  console.log("snap_data", snapshot.docs[0].data);
 
   if (!snapshot.empty) {
-    console.log("snapshot", snapshot.docs[0]);
-
     return snapshot.docs[0].data();
   }
+
   return null;
 }
 
+// Save diagnosis history
 export async function saveDiagnosisHistory(diagnosisData) {
+  await authReady;
+
   const user = auth.currentUser;
+
   if (!user) {
-    throw new Error("Please log in to save your disgnosis history");
+    throw new Error("Please log in to save your diagnosis history.");
   }
 
   const historyRef = collection(db, "users", user.uid, "diagnosisHistory");
@@ -77,10 +93,15 @@ export async function saveDiagnosisHistory(diagnosisData) {
   });
 }
 
+// Get diagnosis history
 export async function getDiagnosisHistory() {
+  await authReady;
+
   const user = auth.currentUser;
+  console.log("user", user);
+
   if (!user) {
-    throw new Error("Please log in to view your diagnosis history");
+    throw new Error("Please log in to view your diagnosis history.");
   }
 
   const historyRef = collection(db, "users", user.uid, "diagnosisHistory");
@@ -92,6 +113,7 @@ export async function getDiagnosisHistory() {
   );
 
   const snapshot = await getDocs(historyQuery);
+  console.log("snapshot", snapshot.docs);
 
   return snapshot.docs.map((document) => ({
     id: document.id,

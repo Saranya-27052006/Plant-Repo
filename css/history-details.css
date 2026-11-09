@@ -38,17 +38,11 @@ h1 {
 
 #details-container h3 {
   color: #216b40;
-  margin-top: 25px;
-}
-
-#details-container h3:first-child {
-  margin-top: 0;
 }
 
 #details-container p,
 #details-container li {
   line-height: 1.7;
-  overflow-wrap: anywhere;
 }
 
 .button {
